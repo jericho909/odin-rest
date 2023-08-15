@@ -3,6 +3,7 @@ import { addSidebar } from "./home";
 import { addHeroText } from "./home";
 import { showContact } from "./contact";
 import { clearScreen } from "./clear";
+import { showMenu } from "./menu";
 
 addSidebar();
 addHeroText();
@@ -16,6 +17,7 @@ homeButton.addEventListener("click", () => {
 const menuButton = document.getElementById("menu-button");
 menuButton.addEventListener("click", () => {
     clearScreen();
+    showMenu();
 })
 
 const contactButton = document.getElementById("contact-button");

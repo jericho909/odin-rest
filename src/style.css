@@ -2,7 +2,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 200px 1fr;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -17,7 +17,6 @@ body {
     grid-column: 1/2;
     background-color: #1e293b;
     padding: 12px;
-    height: 100%;
 }
 
 #logo {
@@ -26,7 +25,9 @@ body {
     font-style: italic;
     color: white;
     font-size: 45px;
-    flex: 1;
+    height: 100px;
+    margin-bottom: 200px;
+    text-align: center;
 }
 
 #buttons {
@@ -35,11 +36,12 @@ body {
     align-items: center;
     gap: 12px;
     margin-bottom: 200px;
-}
-
-button {
-  font-family: 'Roboto', sans-serif;
-  align-items: center;
+    flex: 1;
+  }
+  
+  button {
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
   background-color: #fff;
   border: 2px solid #000;
   box-sizing: border-box;
@@ -64,9 +66,31 @@ button {
   touch-action: manipulation;
 }
 
+button:focus {
+  color: #171e29;
+}
+
+button:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+button:active {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  button {
+    min-width: 170px;
+  }
+}
+
 a {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 #content {
@@ -89,25 +113,15 @@ a {
     font-size: 20px;
 }
 
-
-button:focus {
-  color: #171e29;
+#menu {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
 }
 
-button:hover {
-  border-color: #06f;
-  color: #06f;
-  fill: #06f;
+#menu > h2 {
+  text-align: center;
 }
 
-button:active {
-  border-color: #06f;
-  color: #06f;
-  fill: #06f;
-}
-
-@media (min-width: 768px) {
-  button {
-    min-width: 170px;
-  }
+#menu > div {
+  text-align: center;
 }
