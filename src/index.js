@@ -20,7 +20,6 @@ menuButton.addEventListener("click", () => {
 
 const contactButton = document.getElementById("contact-button");
 contactButton.addEventListener("click", () => {
-    console.log("I am contact");
     clearScreen();
     showContact();
 })

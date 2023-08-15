@@ -6,6 +6,9 @@ export function addSidebar() {
     logo.setAttribute("id", "logo");
     logo.innerText = "The Yarzo"
 
+    const buttons = document.createElement("div");
+    buttons.setAttribute("id", "buttons")
+
     const homeButton = document.createElement("button");
     homeButton.innerText = "Home";
     homeButton.setAttribute("id", "home-button");
@@ -18,15 +21,18 @@ export function addSidebar() {
     contactButton.innerText = "Contact"
     contactButton.setAttribute("id","contact-button");
 
-    //const footer = document.createElement("a");
-    //footer.setAttribute("src","https://github.com/jericho909/");
-    //footer.innerText = "jericho909";
+    const footer = document.createElement("a");
+    footer.setAttribute("id", "footer");
+    footer.setAttribute("href", "https://github.com/jericho909/");
+    footer.setAttribute("target", "_blank");
+    footer.innerText = "Created by jericho909";
 
     sidebarMenu.appendChild(logo);
-    sidebarMenu.appendChild(homeButton);
-    sidebarMenu.appendChild(menuButton);
-    sidebarMenu.appendChild(contactButton);
-    //sidebarMenu.appendChild(footer);
+    buttons.appendChild(homeButton);
+    buttons.appendChild(menuButton);
+    buttons.appendChild(contactButton);
+    sidebarMenu.appendChild(buttons);
+    sidebarMenu.appendChild(footer);
     
 }
 
